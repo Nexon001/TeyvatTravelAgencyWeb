@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace TeyvatTravelAgency.Controllers
+namespace TeyvatTravelAgencyWeb.Controllers
 {
     public class HomeController : Controller
     {
