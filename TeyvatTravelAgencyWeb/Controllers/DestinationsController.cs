@@ -1,9 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace TeyvatTravelAgencyWeb.Controllers
+namespace TeyvatTravelAgency.Controllers
 {
     public class DestinationsController : Controller
     {
+        // GET: /Destinations  and  /Destinations/Index
+        // Grid of all seven nations.
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         // GET: /Destinations/Mondstadt
         public IActionResult Mondstadt()
         {

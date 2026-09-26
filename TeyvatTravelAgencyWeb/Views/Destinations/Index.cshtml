@@ -1,0 +1,86 @@
+@{
+    ViewData["Title"] = "Destinations — The Seven Nations";
+    ViewData["Description"] = "Browse all seven nations of Teyvat with Teyvat Travel Co. — Mondstadt, Liyue, Inazuma, Sumeru, Fontaine, Natlan and Snezhnaya.";
+    ViewData["BodyClass"] = "chapter-profile";
+}
+<section class="hero">
+<div class="container hero-inner">
+<div>
+<h1>The Seven Nations</h1>
+<p class="hero-tagline">One world, seven very different ways to travel through it.</p>
+</div>
+<p class="hero-lede">Every route we sell starts with one of these seven nations. Pick a destination below to read the full chapter — seasonal guidance, field notes, and the itineraries our travellers keep coming back for.</p>
+</div>
+</section>
+
+<section class="content" style="padding-top:40px;">
+<div class="container">
+<div class="section-head-row">
+<h2 style="margin:0;">Choose a nation</h2>
+</div>
+<div class="dest-grid">
+<a class="dest-tile" asp-controller="Destinations" asp-action="Mondstadt">
+<img src="~/images/nations/mondstadt-hero.jpg" alt="Mondstadt — rolling vineyard hills and clifftop windmills" asp-append-version="true">
+<div class="dest-tile-label">
+<div><h3>Mondstadt</h3><p>Wind, vineyards, and open skies.</p></div>
+<span class="dest-tile-arrow" aria-hidden="true">→</span>
+</div>
+</a>
+<a class="dest-tile" asp-controller="Destinations" asp-action="Liyue">
+<img src="~/images/nations/liyue-hero.jpg" alt="Liyue — a terraced harbour beneath jade-toned peaks" asp-append-version="true">
+<div class="dest-tile-label">
+<div><h3>Liyue</h3><p>Contracts kept beneath jade peaks.</p></div>
+<span class="dest-tile-arrow" aria-hidden="true">→</span>
+</div>
+</a>
+<a class="dest-tile" asp-controller="Destinations" asp-action="Inazuma">
+<img src="~/images/nations/inazuma-hero.jpg" alt="Inazuma — a storm-lit island archipelago" asp-append-version="true">
+<div class="dest-tile-label">
+<div><h3>Inazuma</h3><p>Storm-lit islands, tide by tide.</p></div>
+<span class="dest-tile-arrow" aria-hidden="true">→</span>
+</div>
+</a>
+<a class="dest-tile" asp-controller="Destinations" asp-action="Sumeru">
+<img src="~/images/nations/sumeru-hero.jpg" alt="Sumeru — rainforest canopy meeting open desert" asp-append-version="true">
+<div class="dest-tile-label">
+<div><h3>Sumeru</h3><p>Rainforest wisdom, desert nights.</p></div>
+<span class="dest-tile-arrow" aria-hidden="true">→</span>
+</div>
+</a>
+<a class="dest-tile" asp-controller="Destinations" asp-action="Fontaine">
+<img src="~/images/nations/fontaine-hero.jpg" alt="Fontaine — an arched bridge over a canal" asp-append-version="true">
+<div class="dest-tile-label">
+<div><h3>Fontaine</h3><p>Canals, courts, and chandeliers.</p></div>
+<span class="dest-tile-arrow" aria-hidden="true">→</span>
+</div>
+</a>
+<a class="dest-tile" asp-controller="Destinations" asp-action="Natlan">
+<img src="~/images/nations/natlan-hero.jpg" alt="Natlan — fire-lit terraced plazas" asp-append-version="true">
+<div class="dest-tile-label">
+<div><h3>Natlan</h3><p>Fire-lit terraces, drum by drum.</p></div>
+<span class="dest-tile-arrow" aria-hidden="true">→</span>
+</div>
+</a>
+<a class="dest-tile" asp-controller="Destinations" asp-action="Snezhnaya">
+<img src="~/images/nations/snezhnaya-hero.jpg" alt="Snezhnaya — aurora-lit tundra and frost peaks" asp-append-version="true">
+<div class="dest-tile-label">
+<div><h3>Snezhnaya</h3><p>Aurora over the frost line.</p></div>
+<span class="dest-tile-arrow" aria-hidden="true">→</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<section class="cta-band">
+<div class="container cta-inner">
+<div>
+<h2>Not sure where to start?</h2>
+<p>Tell the desk which nations you're drawn to and roughly when you'd like to travel — the Director will reply with a first-draft route.</p>
+</div>
+<div style="display:flex; gap:12px; flex-wrap:wrap;">
+<a class="btn btn-brass" href="mailto:desk@teyvattravel.co">Email the desk</a>
+<a class="btn btn-outline" asp-controller="Home" asp-action="Profile">Read our story</a>
+</div>
+</div>
+</section>
