@@ -86,7 +86,42 @@
             <span>Sole proprietorship · est. Mondstadt</span>
         </div>
     </footer>
-    <script src="~/js/app.js"></script>
+    <script>
+            (function() {
+                var toggle = document.querySelector('.nav-toggle');
+                var nav = document.querySelector('.site-nav');
+                if (!toggle || !nav) return;
+
+                function setOpen(open) {
+                    nav.classList.toggle('is-open', open);
+                    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+                    document.body.classList.toggle('nav-open', open);
+                }
+
+                toggle.addEventListener('click', function() {
+                    setOpen(!nav.classList.contains('is-open'));
+                });
+
+                // close after tapping any link in the menu
+                nav.addEventListener('click', function(e) {
+                    if (e.target.closest('a')) setOpen(false);
+                });
+
+                // close on Escape or when tapping outside the header
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') setOpen(false);
+                });
+                document.addEventListener('click', function(e) {
+                    if (nav.classList.contains('is-open') && !e.target.closest('.site-header')) setOpen(false);
+                });
+
+                // reset if the window is resized up to desktop width
+                window.matchMedia('(min-width: 861px)').addEventListener('change', function(m) {
+                    if (m.matches) setOpen(false);
+                });
+            })();
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
